@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+</h:head>
+<h:body>
+   <!--Formulario de alta-->
+   <h:form id="altaUser" rendered="#{obj.permitirModificarAlumnos}">
+   <p>
+      <h2>Modificar usuario:</h2>
+      <h:inputText value="#{obj.id}"/>
+      <h3>Nuevo nombre:</h3>
+      <h:inputText value="#{obj.name}"/>
+      <h3>Nuevos apellidos:</h3>
+      <h:inputText value="#{obj.lastName}"/>
+   </p>
+   <p>
+      <h:commandButton value="Dar Alta" action="#{obj.modificarUser}"/>
+   </p>
+   </h:form>
+</h:body>
+</html>

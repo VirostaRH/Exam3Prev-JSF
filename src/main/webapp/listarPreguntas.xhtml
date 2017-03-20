@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+</h:head>
+<h:body>
+   <h:form id="altaUser" rendered="#{obj.permitirVer}">
+      <h1>Preguntas del tema:</h1>
+      <h:dataTable value="#{obj.listaR}" var="o" >
+            <h:column>
+               <f:facet name="header">Identificador --------</f:facet>
+               #{o.id} 
+            </h:column>
+            
+            <h:column>
+               <f:facet name="header">Pregunta</f:facet>
+               #{o.cuerpo}
+            </h:column>
+      </h:dataTable>
+   </h:form>
+</h:body>
+</html>

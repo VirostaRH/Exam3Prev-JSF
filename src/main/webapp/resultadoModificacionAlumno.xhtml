@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+</h:head>
+<h:body>
+<h:form id="uno" rendered="#{!obj.usuarioValido}">
+   <p>
+   <h2>Modificación de alumno no ok:</h2>
+   <h3>Probablemente no exista el alumno: <h:outputText value="#{obj.id}"/></h3>
+   </p>
+</h:form>
+<h:form id="dos" rendered="#{obj.usuarioValido}">
+   <h3>Modificación ok - Nuevos datos:</h3>
+   <h4><h:outputText value="#{obj.usuario.id}"/></h4>
+   <h4><h:outputText value="#{obj.usuario.name}"/></h4>
+   <h4><h:outputText value="#{obj.usuario.lastName}"/></h4>
+   <h3>Datos anteriores:</h3>
+   <h4><h:outputText value="#{obj.usuarioCreado.id}"/></h4>
+   <h4><h:outputText value="#{obj.usuarioCreado.name}"/></h4>
+   <h4><h:outputText value="#{obj.usuarioCreado.lastName}"/></h4>
+</h:form>
+</h:body>
+</html>

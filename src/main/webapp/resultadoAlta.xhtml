@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+</h:head>
+<h:body>
+<h:form id="uno" rendered="#{!obj.usuarioValido}">
+   <p>
+   <h2>Inserción no ok:</h2>
+   <h3>Id seleccionado: <h:outputText value="#{obj.id}"/></h3>
+   <h3>Nombre seleccionado: <h:outputText value="#{obj.name}"/></h3>
+   <h3>Apellidos seleccionados: <h:outputText value="#{obj.lastName}"/></h3>
+   </p>
+   <p>Ya existe un usuario con ese ID.</p>
+   <h3>Id almacenado: <h:outputText value="#{obj.usuarioCreado.id}"/></h3>
+   <h3>Nombre almacenado: <h:outputText value="#{obj.usuarioCreado.name}"/></h3>
+   <h3>Apellidos almacenados: <h:outputText value="#{obj.usuarioCreado.lastName}"/></h3>
+</h:form>
+   <h:form id="dos" rendered="#{obj.usuarioValido}">
+   <h2>Inserción ok:</h2>
+   <h3><h:outputText value="#{obj.usuario.id}"/></h3>
+   <h3><h:outputText value="#{obj.usuario.name}"/></h3>
+   <h3><h:outputText value="#{obj.usuario.lastName}"/></h3>
+</h:form>
+</h:body>
+</html>

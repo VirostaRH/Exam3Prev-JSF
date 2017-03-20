@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+</h:head>
+<h:body>
+<h:form id="uno" rendered="#{!obj.preguntaAceptada}">
+   <p>
+   <h2>Inserción no ok:</h2>
+   <h3>Pregunta insertada: <h:outputText value="#{obj.preguntaActual.id}"/></h3>
+   <h3>Pregunta insertada: <h:outputText value="#{obj.preguntaActual.cuerpo}"/></h3>
+   </p>
+   <p>Ya existe una pregunta insertada con esta identificación.</p>
+   <h3>Identificación: <h:outputText value="#{obj.preguntaCreada.id}"/></h3>
+   <h3>Pregunta almacenada: <h:outputText value="#{obj.preguntaCreada.cuerpo}"/></h3>
+</h:form>
+   <h:form id="dos" rendered="#{obj.preguntaAceptada}">
+   <h2>Inserción ok:</h2>
+   <h3><h:outputText value="#{obj.preguntaActual.id}"/></h3>
+   <h3><h:outputText value="#{obj.preguntaActual.cuerpo}"/></h3>
+</h:form>
+</h:body>
+</html>
